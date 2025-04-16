@@ -20,6 +20,7 @@
 
     .container {
       text-align: center;
+      padding: 0 20px;
     }
 
     #message {
@@ -32,10 +33,36 @@
     }
 
     dotlottie-player {
-      width: 300px;
-      height: 300px;
-      margin: 0 auto 20px;
+      width: 250px;
+      height: 250px;
+      margin: 0 auto 30px;
     }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+  dotlottie-player {
+    width: 220px;
+    height: 220px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -44,8 +71,7 @@
       src="https://lottie.host/5376c7a2-b861-47f0-acaf-dce12143d11a/v2jLwjluk3.lottie" 
       background="transparent" 
       speed="1.1"  
-      autoplay
-      style="width: 150px; height: 150px;">
+      autoplay>
     </dotlottie-player>
 
     <div id="message">
