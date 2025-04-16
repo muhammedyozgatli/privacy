@@ -2,6 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport tag'ini ekledik -->
   <title>Gizlilik Kilidi</title>
   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
   <style>
@@ -33,33 +34,35 @@
     }
 
     dotlottie-player {
-      width: 250px;
-      height: 250px;
+      width: 300px; /* Başlangıçta daha büyük boyut */
+      height: 300px; /* Başlangıçta daha büyük boyut */
       margin: 0 auto 30px;
     }
 
     h2 {
-      font-size: 32px;
+      font-size: 40px; /* Başlangıçta büyük yazı boyutu */
       margin-bottom: 10px;
     }
 
     p {
-      font-size: 20px;
+      font-size: 24px; /* Başlangıçta büyük yazı boyutu */
       line-height: 1.6;
     }
 
     @media (max-width: 600px) {
       dotlottie-player {
-        width: 350px; /* Increased size for mobile */
-        height: 350px; /* Increased size for mobile */
+        width: 50vw; /* Ekran boyutuna göre dinamik büyür */
+        height: 50vw; /* Ekran boyutuna göre dinamik büyür */
+        max-width: 400px; /* Daha büyük mobil için max genişlik */
+        max-height: 400px; /* Daha büyük mobil için max yükseklik */
       }
 
       h2 {
-        font-size: 40px; /* Larger font size for mobile */
+        font-size: 9vw; /* Daha büyük yazı boyutu mobilde */
       }
 
       p {
-        font-size: 24px; /* Larger font size for mobile */
+        font-size: 6vw; /* Daha büyük yazı boyutu mobilde */
       }
     }
 
