@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport tag'ini ekledik -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gizlilik Kilidi</title>
   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
   <style>
@@ -34,8 +34,8 @@
     }
 
     dotlottie-player {
-      width: 300px; 
-      height: 300px; 
+      width: 300px;
+      height: 300px;
       margin: 0 auto 30px;
     }
 
@@ -45,32 +45,32 @@
     }
 
     p {
-      font-size: 24px; 
+      font-size: 24px;
       line-height: 1.6;
     }
 
     @media (max-width: 600px) {
       dotlottie-player {
-        width: 50vw; 
-        height: 50vw; 
-        max-width: 400px; 
-        max-height: 400px; 
+        width: 50vw;
+        height: 50vw;
+        max-width: 400px;
+        max-height: 400px;
       }
 
       h2 {
-        font-size: 9vw; 
+        font-size: 9vw;
       }
 
       p {
-        font-size: 6vw; 
+        font-size: 6vw;
       }
     }
-
   </style>
 </head>
 <body>
   <div class="container">
     <dotlottie-player 
+      id="animation" 
       src="https://lottie.host/5376c7a2-b861-47f0-acaf-dce12143d11a/v2jLwjluk3.lottie" 
       background="transparent" 
       speed="1.1"  
@@ -84,6 +84,12 @@
   </div>
 
   <script>
+    
+    const animation = document.getElementById('animation');
+    animation.addEventListener('complete', () => {
+      animation.style.display = 'none'; 
+    });
+
     setTimeout(() => {
       document.getElementById('message').classList.add('visible');
     }, 1500);
